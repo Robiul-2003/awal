@@ -3,9 +3,597 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>awal</title>
+<style>
+   body {
+    
+    font-family:sans-serif;background:white;
+     
+ 
+}
+  body.dark {
+  background-color:rgb(103, 111, 59);
+  color: #f5f5f5;
+}
+  
+    
+    
+    .bigbox{
+      
+      margin:20px;
+      display:flex;
+      gap:7px;
+      flex-wrap:wrap;
+      align-items: center;
+      justify-content: center;
+     border:px solid red;
+    }
+    .box{
+      width:160px;
+      height:160px;
+      background-color:white;
+      border-radius:10px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.2);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      
+    }
+   .link {
+    text-decoration: none;
+    color: inherit; 
+    display: inline-block; 
+  }
+    p{
+      color:black;
+      font-size:18px;
+      font-weight:bold;
+      font-weight: 500;
+    }
+   
+    .slider-container {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+      overflow: hidden;
+      
+    }
+    .product {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+    .product::-webkit-scrollbar {
+      display: none;
+    }
+    .box1{
+      min-width: 200px;
+      height: 120px;
+      margin: 10px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .imeg{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+    .btn {
+      position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+      background-color: #bac1cb;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      width:40px;
+      height:40px;
+      border-radius: 50%;
+      font-size: 20px;
+      z-index: 10;
+    }
+    .prev { left: 0; }
+    .next { right: 0; }
+
+    /* Product Details Box */
+    .details-box {
+      margin: auto;
+      width:300px;
+      background:#fff;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.2);
+      display:none;
+      text-align:center;
+    }
+    .details-box img{
+     width:200px;
+      height:200px;
+      object-fit:contain;
+      
+    }
+    .details-box.show{
+      display:block;
+    }
+    .bt1-back{
+      width:60px;
+      height:40px;
+      margin-right:100%;
+      border-radius:5px;
+      border:2px solid rgb(202, 216, 227);
+      background-color:white;
+     margin-bottom:30px;
+    }
+    .bt2-back{
+      width:110px;
+      height:40px;
+      background-color: green;
+      border:2px solid rgb(232, 226, 226);
+      color:white;
+      border-radius:5px;
+      font-weight: bold;
+    }
+     .shesh{
+      width:100%;
+      height:300px;
+      text-align: center;
+      font-size:25px;
+    }
+    
+    .hi{
+      width:150px ;
+
+      height:100px;
+    }
+    /*.tomato{
+      width:100px;
+      height:100px;
+    }*/
+   .footer{
+    margin: auto;
+    width:50%;
+   border:5px solid red;
+   align-items: center;
+   text-align: center;
+   
+   }
+    .footer1{
+      flex-wrap: wrap;
+      width:328px;
+      height:300px;
+      border:px solid white;
+      color:rgb(7, 7, 7);
+      background-color:;
+      font-size:18px;
+      font-weight:800px;
+      padding-top:20px;
+    }
+samp{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size:40px;
+
+}
+.fa-brands {
+   margin-top:15px;
+     font-size:25px;
+}
+.header1{
+  margin:auto;
+  max-width:1000px;
+  height:700px;
+ 
+}
+.img1{
+      width:100%;
+      height:350px;
+      object-fit:cover;
+      margin: auto;
+    }
+    .button1{
+      color:white;
+      width:100%;
+      height:50px;
+      border:none;
+      background-color:black;
+      margin: auto;
+      cursor:pointer;
+    }
+/* Footer 
+    .footer {
+      width: 100%;
+      background: #fff;
+      padding: 30px 5%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      border-top: 2px solid #eee;
+    }
+
+    .footer1 {
+      flex: 1 1 300px;
+      max-width: 330px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .footer1 samp {
+      font-weight: 700;
+      font-size: 18px;
+      color: #111;
+    }
+
+    .footer1 i {
+      margin: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      color: #007bff;
+    }
+
+    .footer1 i:hover {
+      color: #ff5722;
+    }*/
+  /* 🔹 ছোট ফোন (max-width: 375px) */
+  @media (max-width:375px) {
+    .one {
+      width:90%;
+      height: auto;
+    }
+   
+    .slider-container{
+      margin-top:100px;
+    }
+    .box{
+      width:130px;
+      height:130px;
+    }
+    .footer{
+      width:280px;
+      background-color: ;
+      border:none;
+     
+    }
+    .footer1{
+    width:300px;
+    height:200px;
+    
+   }
+   .dropdown-menu{
+    display: flex;
+   }
+  }
+
+  /* 🔹 বড় ফোন বা ট্যাবলেট (376px–768px) */
+  @media (min-width: 376px) and (max-width: 768px) {
+    .one {
+      width:90%;
+      padding: 15px;
+    }
+    
+    
+    .img1{
+      margin: auto;
+      height: 300px;
+    }
+   .footer{
+    width:300px;
+    border:none;
+    background-color:;
+   }
+   .footer1{
+    width:300px;
+    height:250px;
+   }
+   /* .footer {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer1 {
+        width: 90%;
+        margin-bottom: 15px;
+      }*/
+    
+   
+  }
+
+  /* 🔹 ডেস্কটপ (769px+) */
+  @media (min-width: 769px) {
+    .one {
+      width: 100%;
+      max-width: 1000px;
+       padding: 15px;
+    }
+    .slider-container{
+      margin-top:100px;
+    }
+    .footer{
+     display: flex;
+     border:none;
+    
+    }
+    
+  
+  }
+  .fa-house{
+     font-size:30px;
+     color:#111;
+     margin-bottom:50px;
+  }
+ /*list icon*/
+ .one {
+      background: #fff;
+      color: #111;
+      width: 90%;
+      max-width: 1000px;
+      margin:auto;
+      border-radius:5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      overflow: hidden;
+      transition: height 0.3s ease;
+      
+    }
+
+    .header {
+      height:30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .header .fa-house {
+      position: absolute;
+      left: 20px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    .header #menuIcon {
+      position: absolute;
+      right: 20px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    .dropdown-menu {
+      margin-top:10px;
+      display:flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      background: #f8f8f8;
+      border-top: 1px solid #ddd;
+      padding: 10px 0;
+      animation: slideDown 0.3s ease forwards;
+    }
+
+    @keyframes slideDown {
+      from {opacity: 0; transform: translateY(-10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .dropdown-menu div {
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 8px 12px;
+      border-radius:px;
+      transition: 0.2s;
+    }
+
+    .dropdown-menu div:hover {
+      background: #e0e0e0;
+      transform: scale(1.05);
+    }
+
+    .show {
+      display: flex;
+    }
+
+    @media (max-width:300px) {
+      .dropdown-menu {
+        display: flex;
+      }
+      .dropdown-menu div {
+
+        width: 70px;
+        margin: 5px auto;
+      }
+    }
+</style>
+
 </head>
 <body>
-    <h1>robiul</h1>
+<div class="one" id="oneBox">
+  <div class="header">
+    <a href=""><i class="fa-solid fa-house"></i></a>
+    <h1>Awal</h1>
+    <i class="fa-solid fa-list-ul" id="menuIcon"></i>
+  </div>
+
+  <div class="dropdown-menu" id="dropdownMenu">
+    <div>Sign in</div>
+    <div><i class="fa-regular fa-comment"></i></div>
+    <div><i class="fa-solid fa-bell"></i></div>
+    <div>setting</div>
+    <div id="darkModeToggle"><i class="fa-solid fa-moon"></i></div>
+  </div>
+</div>
+
+<br>
+  <!--header1-->
+<div class="header1">
+<a href="from.html" class="tournament-link"> <img src="free.jpg" alt="" class="img1"> <button class="button1">Freefire</button> </a>
+<br><br>
+<!-- Tournament 2 -->
+<a href="from.html" class="tournament-link"><img src="pubg.png" alt="" class="img1"><button class="button1">PUBG</button></a>
+</div>
+
+  <br><br>
+
+  <!-- Slider -->
+  <div class="slider-container">          
+    <button class="btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="product" id="productSlider">
+      <div class="box1" onclick="showDetails('product1')"><img src="vivo (2).png" alt="" class="imeg"></div>
+      <div class="box1" onclick="showDetails('product2')"><img src="vivo (3).png" alt="" class="imeg"></div>
+      <div class="box1" onclick="showDetails('product3')"><img src="samsung.png" alt="" class="imeg"></div>
+      <div class="box1" onclick="showDetails('product4')"><img src="inginx.png" alt="" class="imeg"></div>
+      <div class="box1" onclick="showDetails('product5')"><img src="realme.png" alt="" class="imeg"></div>
+      <div class="box1" onclick="showDetails('product6')"><img src="vivo.png" alt="" class="imeg"></div>
+      <div class="box1" onclick="showDetails('product7')"><img src="gogle (2).png" alt="" class="imeg"></div>
+    </div>
+    <button class="btn next"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <!-- Product Details -->
+  <div id="product-details" class="details-box">
+    <a href="index.html"> <button class="bt1-back"><i class="fa-solid fa-left-long"></i></button></a>
+    <img id="detail-image" src="" alt="">
+    <h2 id="detail-name"></h2>
+    <p id="detail-price"></p>
+    <p id="detail-RAM"></p>
+    <p id="detail-ROM"></p>
+    <a href="https://wa.me/8801614153820" target="_blank"> <button class="bt2-back">Chat</button></a>
+  </div>
+  <!-- Boxes -->
+  <div class="bigbox">
+     <a href="digital.html" class="link"><div class="box"><p>Digital Marketing <br><br><i class="fa-solid fa-chart-simple"></i></p></div></a>
+    <a href="add.html" class="link"><div class="box"><p>product Add<br><br><i class="fa-solid fa-plus"></i></i> </p></div></a>
+    <a href="business.html"><div class="box"><p>business<br><br><i class="fa-solid fa-users"></i></p></div></a>
+    <div class="box"><p>video editing <br><br><i class="fa-regular fa-camera"></i> </p></div>
+    <a href="drop.html" class="link"><div class="box"><p>Drop shiping <br><br><i class="fa-solid fa-sack-dollar"></i></p></div></a>
+    <a href="sale.html" class="link"><div class="box"><p>Graphics & Design <br><br><i class="fa-solid fa-magnifying-glass-chart"></i></p></div></a>
+  </div><br>
+  <hr>
+  <br><br>
+
+
+
+    <div class="footer">
+       <div class="footer1"><samp>Awal</samp><br><br>
+Largest product search engine,<br> maximum categorized online shopping mall and quickest home delivery system.<br>
+
+Follow Us<i class="fa-brands fa-facebook-f"></i>
+    <i class="fa-brands fa-instagram"></i>
+    
+    <i class="fa-brands fa-youtube"></i>
+    
+</div>
+    <div class="footer1">Contact Us<br><br>
+House #8, Road # 14,<br>
+Dhanmondi, Dhaka-1209.<br>
+
+Email: robiul 28380@gmail.com</div>
+    <div class="footer1">Let Us Help You<br><br>
+Your Account<br>
+Your Order<br>
+Terms & Conditions<br>
+Return & Refund Policy
+FAQ</div>
+
+    </div>
+  </div>
+  <script>
+    const products = {
+      product1: {name:'vivo',image:'vivo (2).png',price:'TK:9900',RAM:'3GB', ROM:'64GB'},
+      product2: {name:'Vivo X200',image:'vivo (3).png',price:'Tk. 1,39,999',RAM:'8GB', ROM:'128'},
+      product3: {name:'Galaxy S23 FE',image:'samsung.png',price:'৳1,500',color:''},
+      product4: {name:'Infinix Smart 9',image:'inginx.png',price:'Tk. 9,499',color:''},
+      product5: {name:'Realme Note 70',image:'realme.png',price:'Tk. 12,999',color:'black'},
+      product6: {name:'Vivo Y400',image:'vivo.png',price:'Tk. 29,999',color:''},
+      product7: {name:'Google Pixel 8 Pro',image:'gogle (2).png',price:'Tk. 79,999',RAM:'8',ROM:'128GB'}
+    };
+
+    function showDetails(productId) {
+      const prod = products[productId];
+      if (!prod) return;
+
+      document.getElementById('detail-image').src = prod.image;
+      document.getElementById('detail-name').textContent = prod.name;
+      document.getElementById('detail-price').textContent = prod.price;
+      document.getElementById('detail-RAM').textContent = 'RAM: ' + prod.RAM  ;
+     document.getElementById('detail-ROM').textContent = 'ROM: ' + prod.ROM  ;
+      document.getElementById('product-details').classList.add('show');
+    }
+    // Slider
+    const slider = document.getElementById('productSlider');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+    const scrollStep = 220;
+
+    next.addEventListener('click', () => {
+      slider.scrollBy({left: scrollStep, behavior: 'smooth'});
+    });
+    prev.addEventListener('click', () => {
+      slider.scrollBy({left: -scrollStep, behavior: 'smooth'});
+    });
+  </script>
+
+<!--list icon-->
+<script>
+    const icon = document.getElementById('menuIcon');
+    const menu = document.getElementById('dropdownMenu');
+
+    // list icon click → toggle dropdown
+    icon.addEventListener('click', (event) => {
+      event.stopPropagation(); // stop click from reaching body
+      menu.classList.toggle('show');
+    });
+
+    // body click → close dropdown
+    document.body.addEventListener('click', (event) => {
+      if (menu.classList.contains('show')) {
+        menu.classList.remove('show');
+      }
+    });
+
+    // prevent closing when clicking inside dropdown
+    menu.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
+  </script>
+<!-- drack  mode-->
+ <script>
+const menuIcon = document.getElementById('menuIcon');
+const dropdownMenu = document.getElementById('dropdownMenu');
+const darkModeToggle = document.getElementById('darkModeToggle');
+const darkIcon = darkModeToggle.querySelector('i');
+
+// Dropdown menu toggle
+menuIcon.onclick = () => {
+  dropdownMenu.style.display =
+    dropdownMenu.style.display === 'flex' ? 'none' : 'flex';
+};
+
+// Dark mode toggle
+darkModeToggle.onclick = () => {
+  document.body.classList.toggle('dark');
+  if (document.body.classList.contains('dark')) {
+    darkIcon.classList.remove('fa-moon');
+    darkIcon.classList.add('fa-sun');
+  } else {
+    darkIcon.classList.remove('fa-sun');
+    darkIcon.classList.add('fa-moon');
+  }
+};
+</script>
+
 </body>
 </html>
