@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>Tournament Registration</title>
+<style>
+  
+/*list icon*/
+ .one {
+      background: #fff;
+      color: #111;
+      width: 90%;
+      max-width: 1000px;
+      margin:auto;
+      border-radius:5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      overflow: hidden;
+      transition: height 0.3s ease;
+    }
+
+    .header {
+      height:30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .header .fa-house {
+      position: absolute;
+      left: 20px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    .header #menuIcon {
+      position: absolute;
+      right: 20px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    .dropdown-menu {
+      display: none;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      background: #f8f8f8;
+      border-top: 1px solid #ddd;
+      padding: 10px 0;
+      animation: slideDown 0.3s ease forwards;
+    }
+
+    @keyframes slideDown {
+      from {opacity: 0; transform: translateY(-10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .dropdown-menu div {
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 8px 12px;
+      border-radius:px;
+      transition: 0.2s;
+    }
+
+    .dropdown-menu div:hover {
+      background: #e0e0e0;
+      transform: scale(1.05);
+    }
+
+    .show {
+      display: flex;
+    }
+
+    @media (max-width:300px) {
+      .dropdown-menu {
+        display: flex;
+      }
+      .dropdown-menu div {
+        width: 70px;
+        margin: 5px auto;
+        height:50px;
+      }
+    }
+.form-box{
+  
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  width:100%;
+  max-width:370px;
+  margin:auto;
+}
+h2{
+  text-align:center;
+  margin-bottom:15px;
+}
+label{
+  display:block;
+  margin-top:10px;
+}
+input, select, textarea{
+  width:100%;
+  padding:8px;
+  margin-top:5px;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+.sub{
+  width:100%;
+  padding:10px;
+  margin-top:15px;
+  border:none;
+  border-radius:5px;
+  background:#28a745;
+  color:#fff;
+  font-weight:bold;
+  cursor:pointer;
+}
+.sub:hover{
+  background:#218838;
+}
+.success{
+  display:none;
+  text-align:center;
+  margin-top:10px;
+  color:#155724;
+  background:#d4edda;
+  padding:10px;
+  border-radius:5px;
+}
+img{
+  width:100px;
+  height:90px;
+  margin-left:10px;
+}
+.rocket{
+  width:120px;
+  height:50px;
+  margin-bottom:20px;
+  margin-left:10px;
+}
+@media (min-width: 376px) and (max-width: 768px){
+  .one{
+    width:90%;
+    height:50px;
+     padding:0 20px;
+  }
+  .form{
+      width:100%;
+  }
+  .regForm{
+    width:100%;
+  }
+}
+</style>
+</head>
+<body>
+<div class="one" id="oneBox">
+    <div class="header">
+      <a href="index.html"><i class="fa-regular fa-house"></i></a>
+      <h1>Awal</h1>
+      <i class="fa-solid fa-list-ul" id="menuIcon"></i>
+    </div>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+      <div>Sign in</div>
+      <div>Statement</div>
+      <div><i class="fa-regular fa-comment"></i></div>
+      <div><i class="fa-solid fa-bell"></i></div>
+      <div>setting</div>
+    </div>
+  </div>
+
+
+  <br><br>
+  
+<div class="form-box">
+  <h2>🎮 Tournament Registration</h2>
+  <form id="regForm">
+    <label for="game">Game select :</label>
+    <select id="game" required>
+      <option value="">Select</option>
+      <option value="Free Fire">Free Fire</option>
+      <option value="PUBG">PUBG</option>
+    </select>
+
+    <label for="team">Team / Player Name:</label>
+    <input type="text" id="team" placeholder="Team Name" required>
+
+    <label for="leader">Leader Name:</label>
+    <input type="text" id="leader" placeholder="You Name" required>
+
+    <label for="contact">Contact Number:</label>
+    <input type="text" id="contact" placeholder="013xxxxxxxx" required>
+
+    <label for="players">All  Players (Name):</label>
+    <input type="text" id="players" placeholder="Player1, Player2, ..." required>
+
+    <label for="notes">Extra Note:</label>
+    <textarea id="notes" rows="2" placeholder="যেমনঃ Rank, Clan, ID .."></textarea>
+
+    <button type="submit" class="sub">Submit Registration</button>
+    <div class="success" id="successMsg">✅ Registration Successful! WhatsApp Message Sent.</div>
+  </form>
+
+  <div class="pay">
+    <h2>only online payment</h2>
+    <h2>01319992654</h2>
+    <img src="Bikash.png" alt="">
+    <img src="Nagod.png" alt="">
+    <img src="Rocket.png" alt="" class="rocket">
+  </div>
+</div>
+
+<script>
+document.getElementById('regForm').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const data = {
+    game: document.getElementById('game').value,
+    team: document.getElementById('team').value,
+    leader: document.getElementById('leader').value,
+    contact: document.getElementById('contact').value,
+    players: document.getElementById('players').value,
+    notes: document.getElementById('notes').value
+  };
+
+  // ✅ তোমার WhatsApp নাম্বার বসাও নিচে (880 ছাড়া)
+  const adminNumber = "8801614153820"; // তোমার নিজের নম্বর
+  const message = 
+`🎮 Tournament Registration
+--------------------
+🎯 Game: ${data.game}
+👥 Team: ${data.team}
+🧑‍💼 Leader: ${data.leader}
+📞 Contact: ${data.contact}
+🎮 Players: ${data.players}
+📝 Note: ${data.notes}`;
+
+  // ✅ WhatsApp Message পাঠানোর জন্য redirect
+  const url = `https://wa.me/${adminNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+
+  document.getElementById('successMsg').style.display = 'block';
+  this.reset();
+});
+</script>
+<!--list icon-->
+<script>
+    const icon = document.getElementById('menuIcon');
+    const menu = document.getElementById('dropdownMenu');
+
+    // list icon click → toggle dropdown
+    icon.addEventListener('click', (event) => {
+      event.stopPropagation(); // stop click from reaching body
+      menu.classList.toggle('show');
+    });
+
+    // body click → close dropdown
+    document.body.addEventListener('click', (event) => {
+      if (menu.classList.contains('show')) {
+        menu.classList.remove('show');
+      }
+    });
+
+    // prevent closing when clicking inside dropdown
+    menu.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
+  </script>
+</body>
+</html>
