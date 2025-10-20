@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+<title>Digital Marketing</title>
+<style>
+body{
+  background-color:white;
+  transition: background-color 0.3s, color 0.3s;
+  margin:0;
+  font-family: Arial, sans-serif;
+}
+body.dark {
+  background-color:#121212;
+  color:#f5f5f5;
+}
+
+/* Header */
+.one1 {
+  
+  background:#fff;
+  color:#111;
+  width:90%;
+ 
+  max-width:1000px;
+  margin:auto;
+  border-radius:5px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+ 
+}
+
+.header {
+  margin-top:5px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:50px;
+  padding:20px 20px;
+  box-sizing:border-box;
+}
+.header .home i {
+  color:black;
+  font-size:25px;
+  cursor:pointer;
+}
+.header h1 {
+  font-size:24px;
+  margin:0;
+  text-align:center;
+  flex:1;
+}
+.header #menuIcon {
+  font-size:25px;
+  cursor:pointer;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  margin-top:10px;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #f8f8f8;
+  border-top:1px solid #ddd;
+  padding:10px 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height:0;      /* hidden by default */
+  opacity:0;
+  overflow:hidden;
+}
+.dropdown-menu.show {
+  max-height:500px;
+  opacity:1;
+}
+
+.dropdown-menu div {
+  font-size:18px;
+  cursor:pointer;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  padding:8px 12px;
+  border-radius:5px;
+  transition:0.2s;
+}
+.dropdown-menu div:hover {
+  background:#e0e0e0;
+  transform:scale(1.05);
+}
+
+/* Cards */
+.fullbox{
+  margin:auto;
+  width:1000px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:20px;
+  
+}
+b{
+  color:#111;
+}
+p{
+  color:black;
+}
+a{
+  text-decoration: none;
+}
+.one{
+  height:400px;
+  width:300px;
+  border:px solid tomato;
+  border-radius:5px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+img{ width:100%; height:220px; border-radius:5px; object-fit:cover; }
+.logo{ width:40px; height:40px; border-radius:50px; }
+#star{ color:gold; font-size:25px; cursor:pointer; transition:0.3s; }
+span{ margin-left:10px; font-size:12px; color:black; }
+
+
+@media(max-width:768px){
+  .fullbox{ width:100%; }
+  .one{ width:90%; margin: auto; }
+}
+</style>
+</head>
+<body>
+
+<div class="one1">
+  <div class="header">
+    <a href="index.html" class="home"><i class="fa-solid fa-house"></i></a>
+    <h1>Awal</h1>
+    <i class="fa-solid fa-list-ul" id="menuIcon"></i>
+  </div>
+
+  <div class="dropdown-menu" id="dropdownMenu">
+    <div>Sign in</div>
+    <div><i class="fa-regular fa-comment"></i></div>
+    <div><i class="fa-solid fa-bell"></i></div>
+    <div>Setting</div>
+    <div id="darkModeToggle"><i class="fa-solid fa-moon"></i></div>
+  </div>
+</div>
+
+ <div class="fullbox">
+    <!--card1-->
+<a href="saleo.html">
+    <div class="one">            
+      <img src="cow.jpg" alt="">
+      <p><img src="cow.jpg" alt="" class="logo"><b>Robiul Awal</b></p>
+      <p>I will grow your Instagram, Facebook, YouTube, Twitter account for super fast organic growth and engagement.</p>
+     <i class="fa-solid fa-star" id="star"><span>6</span> </i>
+    
+    </div>
+</a>
+<br>
+    <!-- Card 2 -->
+    <a href="salet.html">
+        <div class="one">            
+      <img src="office.jpg" alt="">
+      <p><p><img src="office.jpg" alt="" class="logo"><b>rocket</b></p></p>
+      <p>I will grow your Instagram, Facebook, YouTube, Twitter account for super fast organic growth and engagement.</p>
+      <i class="fa-solid fa-star" id="star"><span>6</span></i>
+    </div>
+    </a>
+<br>
+    <!-- Card 3 -->
+    <a href="saleth.html">
+        <div class="one">            
+      <img src="companylogo.jpg" alt="">
+      <p><p><img src="companylogo.jpg" alt="" class="logo"><b>daraz</b></p></p>
+      <p>I will grow your Instagram, Facebook, YouTube, Twitter account for super fast organic growth and engagement.</p>
+      <i class="fa-solid fa-star" id="star"><span>6</span></i>
+    </div>
+    </a>
+    <br>
+    <!--card 4-->
+    <a href="salef.html">                     
+<div class="one">            
+      <img src="whollpaper.jpg" alt="">
+      <p><p><img src="whollpaper.jpg" alt="" class="logo"><b>alhadis</b></p></p>
+      <p>I will grow your Instagram, Facebook, YouTube, Twitter account for super fast organic growth and engagement.</p>
+    <i class="fa-solid fa-star" id="star"><span>6</span></i>
+      </div>
+
+    </a>
+     <!--card 5-->
+<a href="stfive.html">                     
+<div class="one">            
+      <img src="bottordegin.jpg" alt="">
+      <p><p><img src="bottordegin.jpg" alt="" class="logo"><b>oner systems</b></p></p>
+      <p>I will grow your Instagram, Facebook, YouTube, Twitter account for super fast organic growth and engagement.</p>
+    <i class="fa-solid fa-star" id="star"><span>6</span></i>
+      </div>
+
+    </a>
+   </a>
+    <!--card 6-->
+<a href="stpsix.html">                     
+<div class="one">            
+      <img src="designbaner.jpg" alt="">
+      <p><p><img src="designbaner.jpg" alt="" class="logo"><b>data bes</b></p></p>
+      <p>I will grow your Instagram, Facebook, YouTube, Twitter account for super fast organic growth and engagement.</p>
+    <i class="fa-solid fa-star" id="star"><span>6</span></i>
+      </div>
+
+    </a>
+    </div>
+  </div>
+
+<script>
+const menuIcon = document.getElementById('menuIcon');
+const dropdownMenu = document.getElementById('dropdownMenu');
+const darkModeToggle = document.getElementById('darkModeToggle');
+const darkIcon = darkModeToggle.querySelector('i');
+
+// Dropdown toggle
+menuIcon.addEventListener('click', e=>{
+  e.stopPropagation();
+  dropdownMenu.classList.toggle('show');  // click = toggle open/close
+});
+
+// Close dropdown when clicking outside
+document.body.addEventListener('click', ()=>{
+  if(dropdownMenu.classList.contains('show')){
+    dropdownMenu.classList.remove('show'); // auto close
+  }
+});
+
+// Prevent closing when clicking inside dropdown
+dropdownMenu.addEventListener('click', e=>{
+  e.stopPropagation();
+});
+
+// Dark mode toggle
+darkModeToggle.addEventListener('click', ()=>{
+  document.body.classList.toggle('dark');
+  if(document.body.classList.contains('dark')){
+    darkIcon.classList.remove('fa-moon');
+    darkIcon.classList.add('fa-sun');
+  } else{
+    darkIcon.classList.remove('fa-sun');
+    darkIcon.classList.add('fa-moon');
+  }
+});
+</script>
+
+</body>
+</html>
