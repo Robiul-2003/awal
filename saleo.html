@@ -151,7 +151,7 @@
 
     .img2, .one {
       width: 100%;
-      height: auto;
+      height:50%;
       border-radius: 10px;
       margin-top: 15px;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -217,8 +217,8 @@
   </div>
 
   <div class="box1">
-    <div class="">
-      <img src="cow.jpg" alt="Profile" class="img1" id="profileImg" />
+    <div class="profile-container">
+      <img src="Robiuls.jpg" alt="Profile" class="img1" id="profileImg" />
       <label class="upload-icon" for="upload"><i class="fa-solid fa-camera"></i></label>
       <input type="file" id="upload" accept="image/*" hidden />
     </div>
@@ -242,16 +242,15 @@
     </p>
     <textarea id="bioInput"></textarea>
 
-    <img src="cb.png" alt="Code Banner" class="img2" />
+    <img src="cow.jpg" alt="Code Banner" class="img2" />
     <h5>Projects</h5>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-    <img src="db.png" alt="Project Image" class="one" />
+    <img src="pexels-chetanvlad-1595655.jpg" alt="Project Image" class="one" />
     <img src="banner1.png" alt="Banner Image" class="one" />
   </div>
 
   <script>
-    
-// ⭐ Review Count
+    // ⭐ Review Count
     const star = document.getElementById("star");
     const countDisplay = document.getElementById("count");
     let count = parseInt(localStorage.getItem("starCount")) || 0;
@@ -298,6 +297,7 @@
         reader.readAsDataURL(file);
       }
     });
+
     // ✏️ Bio Edit & Save
     const editBioBtn = document.getElementById("editBio");
     const bio = document.getElementById("bio");
