@@ -1,46 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
- .bigbox{
-    width:800px;
-    height:800px;
-    border:5px solid green;
- }
- .one{
-    width:300px;
-    height:300px;
-    border:px solid red;
- }
- .img1{
-    width:1000px;
-    height:300px;
- }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Fire Tournament</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* 🔥 Poster Section */
+.poster {
+  background: url('https://i.ibb.co/Bj5rCFf/fire-bg.jpg') center/cover no-repeat;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.poster-content {
+  position: relative;
+  z-index: 2;
+}
+
+.poster h1 {
+  font-size: 40px;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ff3300;
+}
+
+.poster h2 {
+  font-size: 24px;
+  color: #fff;
+}
+
+.poster .details {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.poster .prize {
+  font-size: 30px;
+  color: #00ff99;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.poster button {
+  background: linear-gradient(90deg, #ff3300, #ff6600);
+  border: none;
+  padding: 12px 25px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.poster button:hover {
+  transform: scale(1.05);
+}
+
+/* 🎮 Form Section */
+.form-box {
+  background: #111;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 30px auto;
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 5px;
+  border: none;
+  background: #222;
+  color: #fff;
+}
+
+button.sub {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  background: #ff6600;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.sub:hover {
+  background: #ff3300;
+}
+
+.success {
+  display: none;
+  text-align: center;
+  margin-top: 10px;
+  color: #00ff99;
+}
+</style>
 </head>
 <body>
-    <div class="bigbox">                                  
-<a href="#">
-        <div class="one">            
-      <img src="foysal.jpg" alt="" class="img1">
-     
-    </div>
-    </a>
-     <a href="#">
-        <div class="one">            
-      <img src="EASY.png" alt="" class="img1">
-      
-    </div>
-    </a>
 
+<!-- 🔥 Free Fire Poster -->
+<section class="poster">
+  <div class="poster-content">
+    <h1>🔥 FREE FIRE TOURNAMENT 🔥</h1>
+    <h2>📅 Date: 30 May 2026</h2>
+    <div class="prize">💰 Prize Pool: 5,000 Taka</div>
+    <div class="details">🎮 Register Now & Join the Battle!</div>
+    <button onclick="document.querySelector('.form-box').scrollIntoView({behavior:'smooth'})">Register Now</button>
+  </div>
+</section>
 
+<!-- 🧾 Registration Form -->
+<div class="form-box">
+  <h2>🎮 Tournament Registration</h2>
+  <form id="regForm">
+    <label>Game:</label>
+    <select id="game" required>
+      <option value="">Select</option>
+      <option value="Free Fire">Free Fire</option>
+      <option value="PUBG">PUBG</option>
+    </select>
 
-    </div>
-     
+    <label>Team / Player Name:</label>
+    <input type="text" id="team" placeholder="Team Name" required>
 
+    <label>Leader Name:</label>
+    <input type="text" id="leader" placeholder="Your Name" required>
+
+    <label>Contact Number:</label>
+    <input type="text" id="contact" placeholder="013xxxxxxxx" required>
+
+    <label>Players:</label>
+    <input type="text" id="players" placeholder="Player1, Player2, ..." required>
+
+    <label>Note:</label>
+    <textarea id="notes" rows="2" placeholder="Clan, Rank, ID ..."></textarea>
+
+    <button type="submit" class="sub">Submit Registration</button>
+    <div class="success" id="successMsg">✅ Registration Successful! WhatsApp Message Sent.</div>
+  </form>
+</div>
+
+<script>
+document.getElementById('regForm').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const data = {
+    game: document.getElementById('game').value,
+    team: document.getElementById('team').value,
+    leader: document.getElementById('leader').value,
+    contact: document.getElementById('contact').value,
+    players: document.getElementById('players').value,
+    notes: document.getElementById('notes').value
+  };
+
+  const adminNumber = "8801614153820";
+
+  const message = 
+`🎮 Tournament Registration
+--------------------
+🎯 Game: ${data.game}
+👥 Team: ${data.team}
+🧑‍💼 Leader: ${data.leader}
+📞 Contact: ${data.contact}
+🎮 Players: ${data.players}
+📝 Note: ${data.notes}`;
+
+  const url = `https://wa.me/${adminNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+
+  document.getElementById('successMsg').style.display = 'block';
+  this.reset();
+});
+</script>
 
 </body>
 </html>

@@ -12,6 +12,69 @@ body.dark {
   color: #f5f5f5;
 }
 
+/*poster*/
+.poster {
+  background: url('') center/cover no-repeat;
+  text-align: center;
+  padding:20px;
+  position: relative;
+}
+
+.poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.poster-content {
+  position: relative;
+  z-index: 2;
+}
+
+.poster h1 {
+  font-size: 40px;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ff3300;
+}
+
+.poster h2 {
+  font-size: 24px;
+  color: #fff;
+  background-color: #b019c7;
+}
+
+.poster .details {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.poster .prize {
+  font-size: 30px;
+  color:rgb(147, 180, 15);
+  font-weight: bold;
+  margin: 10px 0;
+ 
+}
+
+.poster button {
+  background: linear-gradient(90deg, #ff3300, #ff6600);
+  border: none;
+  padding: 12px 25px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.poster button:hover {
+  transform: scale(1.05);
+}
+
+
+
+
 /* Header Box */
 .one1 {
   background: #fff;
@@ -120,7 +183,9 @@ input, select, textarea {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-
+.pay{
+  color:#000;
+}
 .sub {
   width: 100%;
   padding: 10px;
@@ -194,7 +259,17 @@ img {
     <div id="darkModeToggle"><i class="fa-solid fa-moon"></i></div>
   </div>
 </div>
-
+<br>
+<!--foter-->
+<section class="poster">
+  <div class="poster-content">
+    <h1>🔥 FREE FIRE TOURNAMENT 🔥</h1>
+    <h2> Start 📅 Date: 15 /10/ 2026   <br> 📅 Date: 30 May 2026</h2>
+    <div class="prize">💰 Prize Money: 5,000 Taka</div>
+    <div class="details">🎮 Register Now & Join the Battle!</div><br>
+    <button onclick="document.querySelector('.form-box').scrollIntoView({behavior:'smooth'})">Register Now</button>
+  </div>
+</section>
 <!-- Registration Form -->
 <div class="form-box">
   <h2>🎮 Tournament Registration</h2>
