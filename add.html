@@ -41,8 +41,8 @@ input[type ="text"]{
     }
     .product {
       
-      width: 160px;
-      border: 2px solid #efe9e9;
+      width:160px;
+      border: 2px solid rgb(143, 140, 140);
       border-radius: 8px;
       overflow: hidden;
       background-color: #fff;
@@ -339,11 +339,40 @@ input[type ="text"]{
   transform:scale(1.05);
 }
  
-@media screen and (max-width:300px) {
-    .product{
-      width:50px;
-    }
-    
+/* ছোট স্ক্রিনের জন্য (মোবাইল) */
+@media (max-width: 480px) {
+  .product {
+    width: 45%;
+    height: auto;
+  }
+
+  .product1 {
+    width:150px;
+    height: auto;
+  }
+
+  input[type="text"] {
+    width: 90%;
+  }
+
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .product img {
+    height: 150px;
+  }
+}
+
+/* মাঝারি স্ক্রিনের জন্য (ট্যাবলেট) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .product {
+    width: 30%;
+  }
+
+  .product1 {
+    width:130px;
+  }
 }
 
   </style>
