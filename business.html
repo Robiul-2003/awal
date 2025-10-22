@@ -26,7 +26,7 @@ body.dark {
   background:#fff;
   color:#111;
   width:90%;
- 
+  border:px solid red;
   max-width:1000px;
   margin:auto;
   border-radius:5px;
@@ -96,11 +96,11 @@ body.dark {
 
 
 .slideshow-container {
-  max-width: 1000px;
+  max-width:700px;
   height:300px;
   border:px solid red;
   position: relative;
-  margin: auto;
+ margin: auto;
 }
 
 /* Caption text */
@@ -143,66 +143,91 @@ body.dark {
   animation-name: fade;
   animation-duration: 1.5s;
 }
-.bbb{
-  width: 100%;
-  height: 300px;
-  object-fit: contain;
-  background: #eeecec;
-}
+
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
-@media(max-width:300px){
-  .text {font-size: 11px}
-  .pet{
-     width:90%;
-    
-  }
-  .fullbox{
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  
-}
 
-/* Cards */
-.fullbox{
-  margin:auto;
-  width:1000px;
-  display: flex;
-  
-  gap:10px;
-  margin-top:20px;
-  border:5px solid green;
+
+
+img{ width:100%; height:300px; border-radius:5px; object-fit:cover;  }
+.img1{ width:100%; height:320px; border-radius:5px;   }
+.logo{ width:40px; height:40px; border-radius:50px; object-fit:cover;}
+#star{ color:gold; font-size:25px; cursor:pointer; transition:0.3s; margin-left:10px;}
+span{ margin-left:10px; font-size:12px; color:black; }
+/*input type*/
+.name{
+ text-align: center;
+ 
 }
-b{
+input[type ="text"]{
+ width:90%;
+  height:40px;
+  font-size:18px;
+  border-radius:7px;
+}
+/*fullbox*/
+  .fullbox{
+    margin: auto;
+    border:px solid red;
+    width:1000px;
+    height:3000px;
+
+  }
+  .one{
+    margin: auto;
+    width:75%;
+    height:470px;
+    border:1px solid rgba(0,0,0,0.1);
+    
+     box-shadow:0 5px 8px rgba(0,0,0,0.1);
+  }
+ b{
   color:#111;
+  
 }
 p{
   color:black;
+  margin-left:10px;
 }
 a{
   text-decoration: none;
 }
-.one{
-  flex-direction: column;
-  height:400px;
-  width:300px;
-  border:5px solid tomato;
-  border-radius:5px;
-  overflow:hidden;
-  background:#fff;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+/* On smaller screens, decrease text size */
+@media (min-width: 356px) and (max-width: 700px){
+  .text {font-size: 11px}
+  .pet{
+     width:90%;
+  }
+   .fullbox{
+    margin: auto;
+    border:px solid red;
+    width:100%;
+    height:2000px;
+
+  }
+  .one{
+    margin: auto;
+    width:90%;
+    height:470px;
+    border:1px solid rgba(0,0,0,0.1);
+    
+     box-shadow:0 5px 8px rgba(0,0,0,0.1);
+  }
+  .img1{
+    width:100%;
+    height:300px;
+    
+  }
 }
-img{ width:100%; height:220px; border-radius:5px; object-fit:cover; }
-.logo{ width:40px; height:40px; border-radius:50px; }
-#star{ color:gold; font-size:25px; cursor:pointer; transition:0.3s; }
-span{ margin-left:10px; font-size:12px; color:black; }
-
-
+@media (min-width: 769px){
+  input[type ="text"]{
+    width:600px;
+  }
+  
+}
 </style>
 </head>
 <body>
@@ -223,23 +248,33 @@ span{ margin-left:10px; font-size:12px; color:black; }
 </div>
 
 <br>
+
+<div class="name">
+<input type="text" id="find" onkeyup="search()" placeholder="Search product...">
+</div>
+<br><br>
 <div class="slideshow-container">
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="EASY.png" alt="" class="bbb">
+  <img src="EASY.png" alt="" style="height:300px;" >
   <div class="text">Caption Text</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="icepanda.jpg" alt="" class="bbb" >
+  <img src="icepanda.jpg" alt="" style="height:300px;" >
   <div class="text">Caption Two</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="Robiuls.jpg" alt="" class="bbb" >
+  <img src="Robiuls.jpg" alt="" style="height:300px;">
+  <div class="text">Caption Three</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="ghorerbazay.jpg" alt="" style="height:300px;">
   <div class="text">Caption Three</div>
 </div>
 
@@ -250,19 +285,17 @@ span{ margin-left:10px; font-size:12px; color:black; }
   <span class="dot"></span> 
   <span class="dot"></span> 
   <span class="dot"></span> 
+  <span class="dot"></span> 
 </div>
-
-
-
-
-
+<br>
+<!--fullbox-->
 <div class="fullbox">
     <!--card1-->
-<a href="">
+<a href="#">
     <div class="one">            
-      <img src="EASY.png" alt="">
-      <p><img src="EASY.png" alt="" class="logo"><b>Easy</b></p>
-      <p>I will grow your Instagram, Facebook, YouTube, Twitter account for super fast organic growth and engagement.</p>
+      <img src="EASY.png" alt="" class="img1">
+      <p><img src="Robiuls.jpg" alt="" class="logo"><b>Robiul Awal</b></p>
+      <p>I will grow your business grow  and marketing l am manegment you business </p>
      <i class="fa-solid fa-star" id="star"><span>6</span> </i>
     
     </div>
@@ -271,9 +304,9 @@ span{ margin-left:10px; font-size:12px; color:black; }
     <!-- Card 2 -->
     <a href="#">
         <div class="one">            
-      <img src="icepanda.jpg" alt="">
-      <p><p><img src="icepanda.jpg" alt="" class="logo"><b>rocket</b></p></p>
-      <p>icepanda</p>
+      <img src="icepanda.jpg" alt="" class="img1">
+      <p><p><img src="Robiuls.jpg" alt="" class="logo"><b>rocket</b></p></p>
+      <p>I will grow your Instagram, Facebook, YouTube, Twitter account for super fast organic growth and engagement.</p>
       <i class="fa-solid fa-star" id="star"><span>6</span></i>
     </div>
     </a>
@@ -281,15 +314,39 @@ span{ margin-left:10px; font-size:12px; color:black; }
     <!-- Card 3 -->
     <a href="#">
         <div class="one">            
-      <img src="street.jpg" alt="">
-      <p><p><img src="street.jpg" alt="" class="logo"><b>street</b></p></p>
+      <img src="foysal.jpg" alt="" class="img1">
+      <p><p><img src="Robiuls.jpg" alt="" class="logo"><b>daraz</b></p></p>
       <p>I will grow your Instagram, Facebook, YouTube, Twitter account for super fast organic growth and engagement.</p>
-      <i class="fa-solid fa-star" id="star"><span>6</span></i>
+      <i class="fa-solid fa-star" id="star"><span>6</span></i> 
     </div>
     </a>
     <br>
+    <!--card 4-->
+    <a href="#">                     
+<div class="one">            
+      <img src="email.jpg" alt="" class="img1">
+      <p><p><img src="Robiuls.jpg" alt="" class="logo"><b>alhadis</b></p></p>
+      <p>I will grow your Instagram, Facebook, YouTube, Twitter account for super fast organic growth and engagement.</p>
+    <i class="fa-solid fa-star" id="star"><span>6</span></i>
+      </div>
+
+    </a><br>
+<a href="#">                     
+<div class="one">            
+      <img src="ghorerbazay.jpg" alt="" class="img1">
+      <p><p><img src="Robiuls.jpg" alt="" class="logo"><b>alhadis</b></p></p>
+      <p>I will grow your Instagram, Facebook, YouTube, Twitter account for super fast organic growth and engagement.</p>
+    <i class="fa-solid fa-star" id="star"><span>6</span></i>
+      </div>
+
+    </a>
 
 
+
+
+
+
+</div>
 
 <script>
 let slideIndex = 0;
