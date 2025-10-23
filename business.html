@@ -92,62 +92,55 @@ body.dark {
   transform:scale(1.05);
 }
 
-/* Slideshow container */
+ /* Main container */
+  .main {
+    width: 850px;
+    height: 300px;
+    border: px solid green;
+    display: flex;
+    gap:1px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  /* Common slider style */
+  .slider {
+    position: relative;
+    overflow: hidden;
+  
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  /* 1st slider width 500px */
+  .slider.large {
+    width: 500px;
+    height: 300px;
+  }
+
+  /* 2nd slider width 300px */
+  .slider.small {
+    width: 300px;
+    height: 300px;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
 
-.slideshow-container {
-  max-width:700px;
-  height:300px;
-  border:px solid red;
-  position: relative;
- margin: auto;
-}
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 
 
 
@@ -157,6 +150,9 @@ img{ width:100%; height:300px; border-radius:5px; object-fit:cover;  }
 .logo{ width:40px; height:40px; border-radius:50px; object-fit:cover;}
 #star{ color:gold; font-size:25px; cursor:pointer; transition:0.3s; margin-left:10px;}
 span{ margin-left:10px; font-size:12px; color:black; }
+
+
+
 /*input type*/
 .name{
  text-align: center;
@@ -195,6 +191,26 @@ p{
 a{
   text-decoration: none;
 }
+/*footer*/
+.footer{
+  font-size:30px;;
+  color:rgb(40, 39, 39);
+  width:100%;
+  height:40px;
+  border:px solid green;
+ 
+}
+.fa-star{
+  margin-left:6%;
+}
+.fa-comment{
+  margin-left:30%;
+
+}
+.fa-share{
+  margin-left:25%;
+}
+
 /* On smaller screens, decrease text size */
 @media (min-width: 356px) and (max-width: 700px){
   .text {font-size: 11px}
@@ -221,12 +237,28 @@ a{
     height:300px;
     
   }
+  .slider.small{
+    display: none;
+  }
+  .main{
+    width:100%;
+  }
 }
 @media (min-width: 769px){
   input[type ="text"]{
     width:600px;
   }
-  
+  .fa-star{
+  margin-left:8%;
+}
+.fa-comment{
+  margin-left:30%;
+
+}
+.fa-share{
+  margin-left:35%;
+}
+
 }
 </style>
 </head>
@@ -253,50 +285,40 @@ a{
 <input type="text" id="find" onkeyup="search()" placeholder="Search product...">
 </div>
 <br><br>
-<div class="slideshow-container">
+  <div class="main">
+    <!-- Slider 1 -->
+    <div class="slider large">
+      <div class="slides">
+        <div class="slide"><img src="Bikash.png" alt="" style="height:300px;"></div>
+        <div class="slide"><img src="ghorerbazay.jpg" alt="" style="height:300px;"></div>
+        <div class="slide"><img src="Nagod.png" alt="" style="height:300px;"></div>
+        <div class="slide"><img src="Rocket.png" alt="" style="height:300px;"></div>
+      </div>
+    </div>
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="EASY.png" alt="" style="height:300px;" >
-  <div class="text">Caption Text</div>
-</div>
+    <!-- Slider 2 -->
+    <div class="slider small">
+      <div class="slides">
+        <div class="slide"><img src="vivo (3).png" alt="" style="height:300px;"></div>
+        <div class="slide"><img src="Tecno.png" alt="" style="height:300px;"></div>
+        <div class="slide"><img src="realme.png" alt="" style="height:300px;"></div>
+      </div>
+    </div>
+  </div>
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="icepanda.jpg" alt="" style="height:300px;" >
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="Robiuls.jpg" alt="" style="height:300px;">
-  <div class="text">Caption Three</div>
-</div>
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="ghorerbazay.jpg" alt="" style="height:300px;">
-  <div class="text">Caption Three</div>
-</div>
-
-</div>
 <br>
 
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-<br>
+
+
 <!--fullbox-->
 <div class="fullbox">
     <!--card1-->
 <a href="#">
     <div class="one">            
-      <img src="EASY.png" alt="" class="img1">
+      <img src="banner.png" alt="" class="img1">
       <p><img src="Robiuls.jpg" alt="" class="logo"><b>Robiul Awal</b></p>
       <p>I will grow your business grow  and marketing l am manegment you business </p>
-     <i class="fa-solid fa-star" id="star"><span>6</span> </i>
+    <div class="footer"> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-comment"></i> <i class="fa-solid fa-share"></i></div>
     
     </div>
 </a>
@@ -307,7 +329,7 @@ a{
       <img src="icepanda.jpg" alt="" class="img1">
       <p><p><img src="Robiuls.jpg" alt="" class="logo"><b>rocket</b></p></p>
       <p>I will grow your Instagram, Facebook, YouTube, Twitter account for super fast organic growth and engagement.</p>
-      <i class="fa-solid fa-star" id="star"><span>6</span></i>
+      <div class="footer"> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-comment"></i> <i class="fa-solid fa-share"></i></div>
     </div>
     </a>
 <br>
@@ -317,7 +339,7 @@ a{
       <img src="foysal.jpg" alt="" class="img1">
       <p><p><img src="Robiuls.jpg" alt="" class="logo"><b>daraz</b></p></p>
       <p>I will grow your Instagram, Facebook, YouTube, Twitter account for super fast organic growth and engagement.</p>
-      <i class="fa-solid fa-star" id="star"><span>6</span></i> 
+    <div class="footer"> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-comment"></i> <i class="fa-solid fa-share"></i></div>
     </div>
     </a>
     <br>
@@ -327,7 +349,7 @@ a{
       <img src="email.jpg" alt="" class="img1">
       <p><p><img src="Robiuls.jpg" alt="" class="logo"><b>alhadis</b></p></p>
       <p>I will grow your Instagram, Facebook, YouTube, Twitter account for super fast organic growth and engagement.</p>
-    <i class="fa-solid fa-star" id="star"><span>6</span></i>
+     <div class="footer"> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-comment"></i> <i class="fa-solid fa-share"></i></div>
       </div>
 
     </a><br>
@@ -336,39 +358,33 @@ a{
       <img src="ghorerbazay.jpg" alt="" class="img1">
       <p><p><img src="Robiuls.jpg" alt="" class="logo"><b>alhadis</b></p></p>
       <p>I will grow your Instagram, Facebook, YouTube, Twitter account for super fast organic growth and engagement.</p>
-    <i class="fa-solid fa-star" id="star"><span>6</span></i>
+    <div class="footer"> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-comment"></i> <i class="fa-solid fa-share"></i></div>
       </div>
 
     </a>
-
-
-
-
-
-
 </div>
 
-<script>
-let slideIndex = 0;
-showSlides();
+  <script>
+    // Function for multiple sliders (auto-slide only)
+    document.querySelectorAll('.slider').forEach(slider => {
+      const slides = slider.querySelector('.slides');
+      const slideCount = slider.querySelectorAll('.slide').length;
+      let index = 0;
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
+      function showSlide() {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      function nextSlide() {
+        index = (index + 1) % slideCount;
+        showSlide();
+      }
+
+      // Auto slide every 4 seconds
+      setInterval(nextSlide, 4000);
+    });
+  </script>
+
 <!--house icon-->
 <script>
 const menuIcon = document.getElementById('menuIcon');
