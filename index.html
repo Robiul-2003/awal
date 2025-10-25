@@ -12,7 +12,7 @@
   transition: background-color 0.3s, color 0.3s;
   margin:0;
   font-family: Arial, sans-serif;
-   padding-top: 80px;
+   padding-top:60px;
 }
 body.dark {
   background-color:#121212;
@@ -46,6 +46,7 @@ body.dark {
   height:50px;
   padding:20px 20px;
   box-sizing:border-box;
+  border:px solid yellowgreen;
 }
 .header .home i {
   color:black;
@@ -203,7 +204,7 @@ body.dark {
 .thumbs {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap:10px;
   margin-bottom: 15px;
 }
 .thumbs img {
@@ -214,6 +215,7 @@ body.dark {
   cursor: pointer;
   border: 2px solid transparent;
   transition: 0.3s;
+  border:px solid yellow;
 }
 .thumbs img:hover {
   border-color: #000;
@@ -243,34 +245,13 @@ body.dark {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   display: none;
   text-align: center;
-  
+  border:px solid black;
 }
    /**/
 .fa-brands {
    margin-top:15px;
      font-size:25px;
 }
-.header1{
-  margin:auto;
-  max-width:1000px;
-  height:700px;
- 
-}
-.img1{
-      width:100%;
-      height:350px;
-      object-fit:cover;
-      margin: auto;
-    }
-    .button1{
-      color:white;
-      width:100%;
-      height:50px;
-      border:none;
-      background-color:black;
-      margin: auto;
-      cursor:pointer;
-    }
 /*down*/
    .down{
     width:300px;
@@ -305,6 +286,7 @@ body.dark {
    .dropdown-menu{
     display: flex;
    }
+   
   }
    
   /* 🔹 বড় ফোন বা ট্যাবলেট (376px–768px) */
@@ -312,10 +294,6 @@ body.dark {
     .one {
       width:90%;
       padding: 15px;
-    }
-    .img1{
-      margin: auto;
-      height: 300px;
     }
     .down{
       width:90%;
@@ -348,12 +326,50 @@ body.dark {
         border:1px solid rgb(143, 140, 140);
         border-radius:10px; padding-top:50px;
     }
-  .slider-container{
-    margin: top 100px;;
-  }
+  
 }
   
+/*bank*/
+.bank{
+  width:70px;
+  height:50px;
+}
 
+/* header-track*/
+.header-track {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.header-track::-webkit-scrollbar {
+  display: none; /* scrollbar লুকিয়ে রাখবে */
+}
+.btn1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000;
+  color:white;
+  border: none;
+  cursor: pointer;
+ 
+  border-radius: 50%;
+  font-size: 20px;
+  z-index: 10;
+}
+#prev1 { left: 0; }
+#next1 { right: 0; }
+.slider2-container {
+  position: relative;
+  max-width:95%;
+  overflow: hidden;
+  margin: auto;
+}
+a{
+  text-decoration: none;
+  color:#000;
+}
 </style>
 
 </head>
@@ -376,14 +392,57 @@ body.dark {
 
 <br>
   <!--header1-->
-<div class="header1">
-<a href="from.html" class="tournament-link"> <img src="free.jpg" alt="" class="img1"> <button class="button1">Freefire</button> </a>
-<br><br>
-<!-- Tournament 2 -->
-<a href="from.html" class="tournament-link"><img src="pubg.png" alt="" class="img1"><button class="button1">PUBG</button></a>
+<div class="header1" style="border:px solid red;margin: auto; max-width:1000px; height:400px;margin-top:10px;">
+ <img src="headbanner.jpg" alt="" class="img1" style="width:100%; height:400px;">
 </div>
-
-  <br><br>
+<!--slider1--><br>
+<div class="slider2-container" style="width:1000px; margin: auto; margin-bottom:px;">
+    <button class="btn1" id="prev1">&#10094;</button>
+    <div class="header-track" id="slider2" style="display: flex; gap:10px; text-align: center;">
+      <a href="drop.html">
+        <div class="offer"  style="width:220px; height:290px; border:1px solid rgb(158, 162, 158); display: flex; flex-wrap: wrap; gap:5px; background-color:rgb(228, 219, 219)">
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(154, 150, 150);"><img src="Nike2.png" class="imgproduct" style="width:100px; height:110px"> shoes</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(174, 172, 172);"><img src="women.png" class="imgproduct" style="width:100px; height:110px"> shoes</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(163, 161, 161);"><img src="choclet.png" class="imgproduct" style="width:100px; height:110px"> shoes</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(162, 158, 158);"><img src="nike.png" class="imgproduct" style="width:100px; height:110px"> shoes</div>
+        </div>
+      </a>
+      <a href="drop.html">
+        <div class="offer"  style="width:220px; height:290px; border:1px solid rgb(160, 164, 160); display: flex; flex-wrap: wrap; gap:5px; text-align: center; background-color:rgb(228, 219, 219)">
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(151, 146, 146);"><img src="hoptishart.png" class="imgproduct" style="width:100px; height:110px"> df</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(170, 166, 166);"><img src="Full.png" class="imgproduct" style="width:100px; height:110px"> df</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(175, 170, 170);"><img src="Full3.png" class="imgproduct" style="width:100px; height:110px"> df</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(156, 154, 154);"><img src="Full2.png" class="imgproduct" style="width:100px; height:110px"> df</div>
+        </div>
+      </a>
+      <a href="add.html">
+        <div class="offer" style="width:220px; height:290px; border:1px solid rgb(158, 160, 158); display: flex; flex-wrap: wrap; gap:5px; text-align: center; background-color:rgb(228, 219, 219)">
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(142, 138, 138);"><img src="wallmate.jpg" class="imgproduct" style="width:100px; height:110px"> sg</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(152, 148, 148);"><img src="whollpaper.jpg" class="imgproduct" style="width:100px; height:110px"> sg</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(134, 132, 132);"><img src="winner.png" class="imgproduct" style="width:100px; height:110px"> fggh</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(119, 117, 117);"><img src="paper.jpg" class="imgproduct" style="width:100px; height:110px"> paper</div>
+        </div>
+      </a>
+      <a href="add.html">
+        <div class="offer" style="width:220px; height:290px; border:1px solid rgb(150, 152, 150); display: flex; flex-wrap: wrap; gap:5px; text-align: center; background-color:rgb(228, 219, 219)">
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(157, 150, 150);"><img src="vivo (2).png" class="imgproduct" style="width:100px; height:110px"> vivo y90</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(132, 127, 127);"><img src="vivo (3).png" class="imgproduct" style="width:100px; height:110px"> vivo y11</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(128, 126, 126);"><img src="vivo (4).png" class="imgproduct" style="width:100px; height:110px"> vivo y50</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(115, 113, 113);"><img src="vivo.png" class="imgproduct" style="width:100px; height:110px"> vivo y50</div>
+        </div>
+      </a>
+      <a href="add.html">
+        <div class="offer" style="width:220px; height:290px; border:1px solid rgb(126, 128, 126); display: flex; flex-wrap: wrap; gap:5px; text-align: center; background-color:rgb(228, 219, 219);">
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(157, 155, 155);"><img src="vivo (2).png" class="imgproduct" style="width:100px; height:110px"> vivo y90</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(140, 138, 138);"><img src="vivo (3).png" class="imgproduct" style="width:100px; height:110px"> vivo y11</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(143, 141, 141);"><img src="vivo (4).png" class="imgproduct" style="width:100px; height:110px"> vivo y50</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(154, 149, 149);"><img src="vivo.png" class="imgproduct" style="width:100px; height:110px"> vivo y50</div>
+        </div>
+      </a>
+    </div>
+    <button class="btn1" id="next1">&#10095;</button>
+  </div>
+  
   <div class="slider-container">
   <button class="btn prev"><i class="fa-solid fa-chevron-left"></i></button>
   <div class="product" id="productSlider">
@@ -396,6 +455,7 @@ body.dark {
     <div class="box1" onclick="showDetails('product7')"><img src="gogle (2).png" class="imeg"></div>
   </div>
   <button class="btn next"><i class="fa-solid fa-chevron-right"></i></button>
+  
 </div>
 
 <div id="product-details" class="details-box">
@@ -437,10 +497,7 @@ Dhanmondi, Dhaka-1209.
  robiul28380@gmail.com</div>
   <div class="foot">Let Us Help You<br><br>
 Your Account
-Your Order
-Terms & Conditions
-Return & Refund Policy
-FAQ</div>
+Your Order Terms & Conditions Return & Refund Policy FAQ <br><br> <img src="Bikash.png" alt="" class="bank"> <img src="Rocket.png" alt="" class="bank"> <img src="Nagod.png" alt="" class="bank" > </div>
   
 </div>
 
@@ -544,6 +601,28 @@ darkModeToggle.onclick = () => {
     darkIcon.classList.add('fa-moon');
   }
 };
+</script>
+<script>
+// 2nd slider system (slider2-container)
+const slider2 = document.getElementById("slider2");
+const prev1 = document.getElementById("prev1");
+const next1 = document.getElementById("next1");
+
+let scrollAmount = 250; // প্রতি ক্লিক কতটা স্ক্রল হবে
+
+next1.addEventListener("click", () => {
+  slider2.scrollBy({
+    left: scrollAmount,
+    behavior: "smooth"
+  });
+});
+
+prev1.addEventListener("click", () => {
+  slider2.scrollBy({
+    left: -scrollAmount,
+    behavior: "smooth"
+  });
+});
 </script>
 
 </body>
