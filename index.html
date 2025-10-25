@@ -12,6 +12,7 @@
   transition: background-color 0.3s, color 0.3s;
   margin:0;
   font-family: Arial, sans-serif;
+   padding-top: 80px;
 }
 body.dark {
   background-color:#121212;
@@ -20,17 +21,22 @@ body.dark {
 
 /* Header */
 .one1 {
-  
-  background:#fff;
-  color:#111;
-  width:90%;
- 
-  max-width:1000px;
-  margin:auto;
-  border-radius:5px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.2);
- 
+  background: #fff;
+  color: #111;
+  width:100%;
+  max-width: 1000px;
+  margin: 0 auto; /* স্ক্রিনের মাঝে রাখার জন্য */
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+  /* Fixed Header */
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; /* সব কিছুর উপরে দেখানোর জন্য */
 }
+
 
 .header {
   margin-top:5px;
@@ -319,6 +325,7 @@ body.dark {
       width:90%;
       margin: auto;
     }
+    
   }
 
   /* 🔹 ডেস্কটপ (769px+) */
@@ -341,6 +348,9 @@ body.dark {
         border:1px solid rgb(143, 140, 140);
         border-radius:10px; padding-top:50px;
     }
+  .slider-container{
+    margin: top 100px;;
+  }
 }
   
 
@@ -350,7 +360,7 @@ body.dark {
 <body>
 <div class="one1" id="oneBox">
   <div class="header">
-    <a href="#"><i class="fa-solid fa-house"></i></a>
+    <a href=""><i class="fa-solid fa-house"></i></a>
     <h1>Awal</h1>
     <i class="fa-solid fa-list-ul" id="menuIcon"></i>
   </div>
