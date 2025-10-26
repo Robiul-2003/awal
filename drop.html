@@ -59,9 +59,8 @@
       .box {
         width:100%;
       }
-      .one {
-        width:42%;
-      }
+     .one { width:42%; }
+    
     }
 
     /* Modal CSS */
@@ -210,7 +209,20 @@
       box-shadow: #555 1px 1px 2px 2px;
       
     }
+ /*search box*/
+ .name{
+  margin: auto;
+  max-width:700px;
+  
  
+ text-align: center;
+ }
+input[type ="text"]{
+ width:90%;
+  height:40px;
+  font-size:18px;
+  border-radius:7px;
+}
   </style>
 </head>
 <body>
@@ -231,9 +243,11 @@
       <div id="darkModeToggle"><i class="fa-solid fa-moon"></i></div>
     </div>
   </div>
-
+<br>
   <br><br><br>
-
+<div class="name">
+<input type="text" id="find" onkeyup="search()" placeholder="Search product...">
+</div>
   <!-- Product Cards -->
   <div class="box">
     <div class="one" onclick="openModal(['nike.png','Nike2.png','Nike3.png','Nike4.png'],'Man Shoes','500')">
@@ -363,5 +377,21 @@
       }
     });
   </script>
+  </script> <!-- dark mode er script sesh -->
+<script>
+function search() {
+  let input = document.getElementById('find').value.toLowerCase();
+  let products = document.getElementsByClassName('one');
+
+  for (let i = 0; i < products.length; i++) {
+    let text = products[i].innerText.toLowerCase();
+    if (text.includes(input)) {
+      products[i].style.display = "block";
+    } else {
+      products[i].style.display = "none";
+    }
+  }
+}
+</script>
 </body>
 </html>

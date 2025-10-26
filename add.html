@@ -435,7 +435,7 @@ input[type ="text"]{
     <div class="product" onclick="showDetails('product2')"><img src="ofwhate.png" alt="shart ২"><h3>shart</h3><p>Price:১,000<span clss="delet"><del>1,300</del></span></p></div>
     <!-- আরও প্রোডাক্ট এখানে যোগ করতে পারেন -->
      <div class="product" onclick="showDetails('product3')"><img src="paper.jpg" alt="shart ২"><h3>shart</h3><p>Price:১,৫০০<span class="delet"><del>1,300</del></span></p></div>
-    <div class="product" onclick="showDetails('product4')"><img src="Screenshot 2025-09-06 230841.png" alt="পাঞ্জাবি ২"><h3>shart</h3><p>Price:9,00<span class="delet"><del>1,300</del></span></p></div>
+    <div class="product" onclick="showDetails('product4')"><img src="kissmis.png" alt="পাঞ্জাবি ২"><h3>shart</h3><p>Price:9,00<span class="delet"><del>1,300</del></span></p></div>
     <div class="product" onclick="showDetails('product5')"><img src="cycle.png" alt="পাঞ্জাবি ২"><h3>cycle</h3><p>Price:11,500<span class="delet"><del>12,000</del></span></p></div>
     <div class="product" onclick="showDetails('product6')"><img src="hoptishart.png" alt="পাঞ্জাবি ২"><h3>ti shart</h3><p>Price:১,৫০০<span class="delet"><del>1,300</del></span></p></div>
      <div class="product" onclick="showDetails('product7')"><img src="fullthishart.png" alt="পাঞ্জাবি ১"><h3>full ti shart</h3><p>Price:1,200<span class="delet"><del>1,300</del></span> </p></div>
@@ -639,6 +639,23 @@ darkModeToggle.addEventListener('click', ()=>{
     darkIcon.classList.add('fa-moon');
   }
 });
+</script>
+<script>
+  // 🔹 URL থেকে product ID নিয়ে ডিটেইল দেখানো
+  const params = new URLSearchParams(window.location.search);
+  const productId = params.get("id");
+
+  if (productId) {
+    const prod = products[productId];
+    if (prod) {
+      document.getElementById('detail-image').src = prod.image;
+      document.getElementById('detail-name').textContent = prod.name;
+      document.getElementById('detail-price').textContent = prod.price;
+      document.getElementById('detail-color').textContent = 'color: ' + prod.color;
+
+      document.getElementById('product-details').classList.add('show');
+    }
+  }
 </script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />

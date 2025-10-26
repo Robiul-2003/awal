@@ -59,9 +59,8 @@
       .box {
         width:100%;
       }
-      .one {
-        width:42%;
-      }
+     .one { width:42%; }
+    
     }
 
     /* Modal CSS */
@@ -210,7 +209,20 @@
       box-shadow: #555 1px 1px 2px 2px;
       
     }
-   
+ /*search box*/
+ .name{
+  margin: auto;
+  max-width:700px;
+  
+ 
+ text-align: center;
+ }
+input[type ="text"]{
+ width:90%;
+  height:40px;
+  font-size:18px;
+  border-radius:7px;
+}
   </style>
 </head>
 <body>
@@ -218,7 +230,7 @@
   <!-- Fixed Header -->
   <div class="one1">
     <div class="header">
-      <a href="index.html" class="home"><i class="fa-solid fa-house"></i></a>
+      <a href="drop.html" class="home"><i class="fa-solid fa-house"></i></a>
       <h1>Awal</h1>
       <i class="fa-solid fa-list-ul" id="menuIcon"></i>
     </div>
@@ -232,29 +244,29 @@
     </div>
   </div>
 <br>
-  <br><br>
- <div class="name">
+  <br><br><br>
+<div class="name">
 <input type="text" id="find" onkeyup="search()" placeholder="Search product...">
 </div>
   <!-- Product Cards -->
   <div class="box">
-    <div class="one" onclick="openModal(['nike.png','Nike2.png','Nike3.png','Nike4.png'],'Man Shoes','500')">
-      <img src="nike.png" alt="" class="imes">
+    <div class="one" onclick="openModal(['vivo','Vivo','Nike3.png','Nike4.png'],'Man Shoes','500')">
+      <img src="vivo (2).png" alt="" class="imes">
       <p>Man Shoes <br>Price : 500<br>Maximum 100 product up</p>
     </div>
 
-    <div class="one" onclick="openModal(['choclet.png','choclet1.png','choclet2.png','choclet3.png'],'Travel Bag','1200')">
-      <img src="choclet.png" alt="" class="imes">
+    <div class="one" onclick="openModal(['Infinix','choclet1.png','choclet2.png','choclet3.png'],'Travel Bag','1200')">
+      <img src="samsung.png" alt="" class="imes">
       <p>Nike Shoes <br>Price : 1200<br>Maximum 50 product up</p>
     </div>
 
-    <div class="one" onclick="openModal(['Hop.png','Hop1.png','Hop2.png','Hop3.png'],'Hop Ti-shart','2500')">
-      <img src="Hop.png" alt="" class="imes">
+    <div class="one" onclick="openModal(['realme','Hop1.png','Hop2.png','Hop3.png'],'Hop Ti-shart','2500')">
+      <img src="realme.png" alt="" class="imes">
       <p>Hop Ti-shart <br>Price : 2500<br>Maximum 30 product up</p>
     </div>
 
-    <div class="one" onclick="openModal(['Hop.png','Hop1.png','Hop2.png','Full3.png'],'Full Ti-shart','2500')">
-      <img src="Full.png" alt="" class="imes">
+    <div class="one" onclick="openModal(['samsung','Hop1.png','Hop2.png','Full3.png'],'Full Ti-shart','2500')">
+      <img src="inginx.png" alt="" class="imes">
       <p>Full Ti-shart <br>Price : 2500<br>Maximum 30 product up</p>
     </div>
 
@@ -285,7 +297,7 @@
 
     <div class="one" onclick="openModal(['watch.png','watch1.png','watch2.png','watch3.png'],'Smart Watch','2500')">
       <img src="Nike4.png" alt="" class="imes">
-      <p>bike  <br>Price : 2500<br>Maximum 30 product up</p>
+      <p>Smart Watch <br>Price : 2500<br>Maximum 30 product up</p>
     </div>
   </div>
 
