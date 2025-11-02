@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Banner Section</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi Language Website</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Poppins", sans-serif;
-      background: #f4f4f4;
-    }
-
+    body { font-family: "Poppins", sans-serif; text-align: center; margin-top: 50px; }
+    button { margin: 10px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
   </style>
 </head>
 <body>
-    <a href="home"><h1>Home</h1></a>  
-      <a href=""><h1>About</h1> </a>
-      <a href=""><h1>setting</h1> </a>
-      <a href=""><h1>back</h1></a>
-      
-       <div class="Home">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt perspiciatis repellat, ipsum nostrum vero consequatur omnis at blanditiis sint repellendus aut, eius voluptate architecto fugit aperiam officia officiis aspernatur rem.</div>
-      <br> <div class="about">123456789654654465444466546544656465654</div>
-      <br> <div class="setting">................................................................................................................................................................................................................................................................................................................................................................................</div>
-       <div class="back">uihvgyb oiusdynoiaf diunvg yiao ieruanaifojdoijirutur ojoitsun bgjoiutbn aosu bn</div>
+
+  <div>
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('bn')">বাংলা</button>
+  </div>
+
+  <h1 id="title"></h1>
+  <p id="description"></p>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Welcome to Our Website",
+        description: "We sell fresh and beautiful flowers."
+      },
+      bn: {
+        title: "আমাদের ওয়েবসাইটে স্বাগতম",
+        description: "আমরা তাজা ও সুন্দর ফুল বিক্রি করি।"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.getElementById("title").innerText = translations[lang].title;
+      document.getElementById("description").innerText = translations[lang].description;
+      localStorage.setItem("language", lang);
+    }
+
+    // Save last selected language
+    const savedLang = localStorage.getItem("language") || "en";
+    setLanguage(savedLang);
+  </script>
 </body>
 </html>
-
