@@ -30,10 +30,10 @@ body.dark {
 
 /* Header */
 .one1 {
-  background: #fff;
+  background: #e8ecec;
   color: #111;
   width:100%;
-  max-width: 1000px;
+  max-width:1000px;
   margin: 0 auto; /* স্ক্রিনের মাঝে রাখার জন্য */
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -84,7 +84,7 @@ body.dark {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  background: #f8f8f8;
+  background:;
   border-top:1px solid #ddd;
   padding:10px 0;
   transition: max-height 0.3s ease, opacity 0.3s ease;
@@ -104,11 +104,13 @@ body.dark {
   padding:8px 12px;
   border-radius:5px;
   transition:0.2s;
+  color:rgb(37, 35, 35);
 }
 .dropdown-menu div:hover {
   background:#e0e0e0;
   transform:scale(1.05);
 }
+
  /*^ list*/
 
  /*bigbox*/
@@ -347,13 +349,17 @@ body.dark {
    .dropdown-menu{
     flex-direction: column;
     border:px solid red;
-    width:200px;
-    gap:12px;
+    width:50%;
+    height:400px;
+    gap:5px;
     margin-left: auto;
    align-items: first baseline;
    background-color: #e8ecec;
+   padding-left:20px;
    }
-  
+  .Na{
+    display: flex;
+  }
    
   }
 
@@ -389,6 +395,9 @@ body.dark {
   .name{
     width:100%;
     height:400px;
+   }
+   .Na{
+   display: none;
    }
 }
   
@@ -439,6 +448,7 @@ a{
    display: flex; flex-wrap: wrap; gap:5px; text-align: center; background-color:white;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+
 </style>
 
 </head>
@@ -446,22 +456,23 @@ a{
 <div class="one1" id="oneBox">
   <div class="header">
     <a href=""><i class="fa-solid fa-house"></i></a>
-    <h1>Awal</h1>
+  <h1>  <span class="colorName" style="color:rgb(170, 89, 89); font-size:25px;">A</span>wal</h1>
     <i class="fa-solid fa-list-ul" id="menuIcon"></i>
   </div>
 
   <div class="dropdown-menu" id="dropdownMenu">
+
+  <a href="index.html" class="Na" style="font-size:25px;"><button class="bt1-back" style="border:none; font-size:22px; color:rgb(101, 98, 98);"><i class="fa-solid fa-arrow-left"></i></button><span class="colorName" style="color:rgb(170, 89, 89); margin-left:40%;">A</span>wal </a> 
    <a href="from.html"> <div>Sign in</div></a>
-  
-    <div><i class="fa-regular fa-comment"></i> Chats</div>
+    <div><i class="fa-regular fa-comment"></i>  Chats</div>
     <div><i class="fa-solid fa-bell"></i> Notifications</div>
     <div><i class="fa-solid fa-video"></i> Vedio </div>
     <div id="darkModeToggle"><i class="fa-solid fa-moon"></i>Dark</div>
-    <a href="testto.html"><div> School </div></a>
+    <div> School </div>
   </div>
 </div>
 
-<br><br>
+<br>
   <!--header1-->
 <div class="header1">
  <img src="headbanner.png" alt="" class="name" >
@@ -474,22 +485,22 @@ a{
         <div class="offer">
           <span style="margin: auto;">All baby product</span>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(232, 231, 231);"><img src="baby set.jpg" class="imgproduct" style="width:100px; height:110px">All set</div>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(234, 232, 232);"><img src="baby shoes.jpg" class="imgproduct" style="width:100px; height:110px">All shoes</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(234, 232, 232);"><img src="baby shoes.jpg" class="imgproduct" style="width:100px; height:110px">All Shoes</div>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(244, 242, 242);"><img src="baby tupi.jpg" class="imgproduct" style="width:100px; height:110px">All tupi</div>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(242, 238, 238);"><img src="baby pant.jpg" class="imgproduct" style="width:100px; height:110px">All pant</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(242, 238, 238);"><img src="babyschoolbag.jpg" class="imgproduct" style="width:100px; height:110px">All Bag</div>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(244, 242, 242);"><img src="babyDressb.jpg" class="imgproduct" style="width:100px; height:110px">All Dress</div>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(242, 238, 238);"><img src="baby toy.jpg" class="imgproduct" style="width:100px; height:110px">All Toy</div>
         </div>
       </a>
       <a href="woman.html">
         <div class="offer">
-         <span style="margin: auto;">All women product</span>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(234, 229, 229);"><img src="women.hell.jpg" class="imgproduct" style="width:100px; height:110px">All </div>
+         <span style="margin: auto;">All woman product</span>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(234, 229, 229);"><img src="women.hell.jpg" class="imgproduct" style="width:100px; height:110px">All Slipper </div>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(223, 222, 222);"><img src="women pant.jpg" class="imgproduct" style="width:100px; height:110px">All </div>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(225, 220, 220);"><img src="women pan.jpg" class="imgproduct" style="width:100px; height:110px">All </div>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(231, 229, 229);"><img src="women.png" class="imgproduct" style="width:100px; height:110px">All </div>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(225, 220, 220);"><img src="women pan.jpg" class="imgproduct" style="width:100px; height:110px">All </div>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(231, 229, 229);"><img src="women.png" class="imgproduct" style="width:100px; height:110px">All </div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(225, 220, 220);"><img src="womanbag.jpg" class="imgproduct" style="width:100px; height:110px">All Bag</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(231, 229, 229);"><img src="womangrif.jpg" class="imgproduct" style="width:100px; height:110px">All </div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(225, 220, 220);"><img src="womancosmetics.jpg" class="imgproduct" style="width:100px; height:110px">All Cosmetics</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(231, 229, 229);"><img src="women.png" class="imgproduct" style="width:100px; height:110px">All shoes </div>
         </div>
       </a>
       <a href="man.html">
@@ -498,9 +509,9 @@ a{
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(216, 213, 213);"><img src="hoptishart.png" class="imgproduct" style="width:100px; height:110px">All Ti shart</div>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(226, 221, 221);"><img src="ofwhate.png" class="imgproduct" style="width:100px; height:110px">All shart</div>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(220, 216, 216);"><img src="choclet1.png" class="imgproduct" style="width:100px; height:110px">All shoes</div>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(213, 210, 210);"><img src="man pant.jpg" class="imgproduct" style="width:100px; height:110px">All </div>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(220, 216, 216);"><img src="choclet1.png" class="imgproduct" style="width:100px; height:110px">All shoes</div>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(213, 210, 210);"><img src="man pant.jpg" class="imgproduct" style="width:100px; height:110px">All </div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(213, 210, 210);"><img src="man pant.jpg" class="imgproduct" style="width:100px; height:110px">All Pant </div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(220, 216, 216);"><img src="Head_Gear_Black_Super_Cord_Cap-Head_Gear-e06b2-418025.png" class="imgproduct" style="width:100px; height:110px">All Cap</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(213, 210, 210);"><img src="mansliper.jpg" class="imgproduct" style="width:100px; height:110px">All Slipper</div>
         </div>
       </a>
        <a href="honey.html">
@@ -510,30 +521,41 @@ a{
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(223, 222, 222);"><img src="Ghorer_Bazar_Kaju_Badam_Medium_500gm-Ghorer_Bazar-102c5-470769.png" class="imgproduct" style="width:100px; height:110px">All Badam</div>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(225, 220, 220);"><img src="Maryam_Premium_Dates_500gm_Al_Madinah-Saad-022da-450504.png" class="imgproduct" style="width:100px; height:110px">All Dates</div>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(231, 229, 229);"><img src="Green_Harvest_Jaitun_Oil_100_ml_GHEO5026-Green_Harvest-d8b1d-390622.png" class="imgproduct" style="width:100px; height:110px">All oil</div>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(225, 220, 220);"><img src="Maryam_Premium_Dates_500gm_Al_Madinah-Saad-022da-450504.png" class="imgproduct" style="width:100px; height:110px">All Dates</div>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(231, 229, 229);"><img src="Green_Harvest_Jaitun_Oil_100_ml_GHEO5026-Green_Harvest-d8b1d-390622.png" class="imgproduct" style="width:100px; height:110px">All oil</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(225, 220, 220);"><img src="ricebasmoti.jpg" class="imgproduct" style="width:100px; height:110px">All Rice</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(231, 229, 229);"><img src="mosla.jpg" class="imgproduct" style="width:100px; height:110px">All Spice</div>
         </div>
       </a>
       <a href="">
         <div class="offer">
-          <span style="margin: auto;">All Laptop product</span>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(222, 217, 217);"><img src="Havit_H206d_Headphone_35mm_Double_Plug_A-Havit-dc5fe-320767.jpg" class="imgproduct" style="width:100px; height:110px">All Headphon</div>
+          <span style="margin: auto;">All Laptop Accessories</span>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(222, 217, 217);"><img src="laptop.jpg" class="imgproduct" style="width:100px; height:110px">All Headphon</div>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(206, 201, 201);"><img src="ASUS_VY229HF_22_Inch_Full_HD_100Hz_1ms_E-Asus-1910b-442790.png" class="imgproduct" style="width:100px; height:110px">All monitor</div>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(230, 228, 228);"><img src="laptop.jpg" class="imgproduct" style="width:100px; height:110px">All laptop</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(230, 228, 228);"><img src="Havit_H206d_Headphone_35mm_Double_Plug_A-Havit-dc5fe-320767.jpg" class="imgproduct" style="width:100px; height:110px">All laptop</div>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(208, 204, 204);"><img src="Logitech_USB_Contoured_Shape_Mouse_-Logitech-8f5f8-136736.jpg" class="imgproduct" style="width:100px; height:110px">All mouse</div>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(230, 228, 228);"><img src="laptop.jpg" class="imgproduct" style="width:100px; height:110px">All laptop</div>
-          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(208, 204, 204);"><img src="Logitech_USB_Contoured_Shape_Mouse_-Logitech-8f5f8-136736.jpg" class="imgproduct" style="width:100px; height:110px">All mouse</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(230, 228, 228);"><img src="Havit_KB2006_USB_Wired_Keyboard-Havit-73220-318587.png" class="imgproduct" style="width:100px; height:110px">All laptop</div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(208, 204, 204);"><img src="Havit_SK717_Usb_Stereo_Speaker-Havit-07fd7-321566.jpg" class="imgproduct" style="width:100px; height:110px">All mouse</div>
         </div>
       </a>
       <a href="phon.html">
         <div class="offer">
-          <span style="margin: auto;">All mobile product</span>
+          <span style="margin: auto;">All Mobile Accessories</span>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(220, 218, 218);"><img src="vivo (2).png" class="imgproduct" style="width:100px; height:110px">All phon</div>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(226, 220, 220);"><img src="Xiaomi_33W_Power_Adaptar_Suit_With_Type_-Xiaomi-ecd80-432428.png" class="imgproduct" style="width:100px; height:110px">All charger</div>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(216, 212, 212);"><img src="phone-battery.jpg" class="imgproduct" style="width:100px; height:110px">All battery</div>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(232, 230, 230);"><img src="Samsung-Galaxy-A7-2017-Display.jpg" class="imgproduct" style="width:100px; height:110px">All Display</div>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(216, 212, 212);"><img src="phone-battery.jpg" class="imgproduct" style="width:100px; height:110px">All battery</div>
           <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(232, 230, 230);"><img src="Samsung-Galaxy-A7-2017-Display.jpg" class="imgproduct" style="width:100px; height:110px">All Display</div>
+        </div>
+      </a>
+      <a href="phon.html">
+        <div class="offer">
+          <span style="margin: auto;">All way product</span>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(220, 218, 218);"><img src="cycle.png" class="imgproduct" style="width:100px; height:110px">All </div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(226, 220, 220);"><img src="" class="imgproduct" style="width:100px; height:110px">All </div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(216, 212, 212);"><img src="" class="imgproduct" style="width:100px; height:110px">All </div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(232, 230, 230);"><img src="" class="imgproduct" style="width:100px; height:110px">All </div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(216, 212, 212);"><img src="" class="imgproduct" style="width:100px; height:110px">All </div>
+          <div class="product-items" style="width:105px; height:140px;border:1px solid rgb(232, 230, 230);"><img src="" class="imgproduct" style="width:100px; height:110px">All </div>
         </div>
       </a>
     </div>
